@@ -1,0 +1,192 @@
+{
+	"categories": [
+	  {
+		"value": 40,
+		"heading": "Laptops"
+	  },
+	  {
+		"value": 100,
+		"heading": "Shoes"
+	  },
+	  {
+		"value": 80,
+		"heading": "Cameras"
+	  },
+	  {
+		"value": 60,
+		"heading": "Jeans"
+	  }
+	],
+	"transaction": [
+	  {
+		"_id": "ksdnfkjsdfx",
+		"amount": 4000,
+		"quantity": 4,
+		"discount": 300,
+		"status": "Processing"
+	  },
+	  {
+		"_id": "sdsdssdsd",
+		"amount": 349000000,
+		"quantity": 2,
+		"discount": 900,
+		"status": "Processing"
+	  },
+	  {
+		"_id": "sdsdcvsssdsd",
+		"amount": 4500,
+		"quantity": 91,
+		"discount": 0,
+		"status": "Shipped"
+	  },
+	  {
+		"_id": "dfddddfd",
+		"amount": 2300,
+		"quantity": 4,
+		"discount": 2000,
+		"status": "Processing"
+	  }
+	],
+	"WidgetData": [
+	  {
+		"heading": "Revenue",
+		"amount": true,
+		"value": 340000,
+		"percentage": 56,
+		"color": "blue"
+	  },
+	  {
+		"heading": "Users",
+		"amount": false,
+		"value": 63,
+		"percentage": -14,
+		"color": "purple"
+	  },
+	  {
+		"heading": "Transactions",
+		"amount": false,
+		"value": 2300,
+		"percentage": 80,
+		"color": "orange"
+	  },
+	  {
+		"heading": "Products",
+		"amount": false,
+		"value": 1000,
+		"percentage": 30,
+		"color": "blue"
+	  }
+	],
+	"InventoryData": [
+	  {
+		"label": "Laptops",
+		"percentage": 40,
+		"color": "green"
+	  },
+	  {
+		"label": "Shoes",
+		"percentage": 100,
+		"color": "orange"
+	  },
+	  {
+		"label": "Cameras",
+		"percentage": 80,
+		"color": "pink"
+	  },
+	  {
+		"label": "Jeans",
+		"percentage": 60,
+		"color": "blue"
+	  }
+	],
+	"ProductData": [
+	  {
+		"photo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804",
+		"name": "Puma Shoes Air Jordan Cook Nigga 2023",
+		"price": 690,
+		"stock": 3,
+		"action": "/"
+	  },
+	  {
+		"photo": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"name": "Macbook",
+		"price": 232223,
+		"stock": 213,
+		"action": "/search"
+	  },
+	  {
+		"photo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804",
+		"name": "Puma Shoes Air Jordan Cook Nigga 2023",
+		"price": 690,
+		"stock": 3,
+		"action": "/"
+	  },
+	  {
+		"photo": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"name": "Macbook",
+		"price": 232223,
+		"stock": 213,
+		"action": "/search"
+	  },
+	  {
+		"photo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804",
+		"name": "Puma Shoes Air Jordan Cook Nigga 2023",
+		"price": 690,
+		"stock": 3,
+		"action": "/"
+	  },
+	  {
+		"photo": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"name": "Macbook",
+		"price": 232223,
+		"stock": 213,
+		"action": "/search"
+	  },
+	  {
+		"photo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804",
+		"name": "Puma Shoes Air Jordan Cook Nigga 2023",
+		"price": 690,
+		"stock": 3,
+		"action": "/"
+	  },
+	  {
+		"photo": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"name": "Macbook",
+		"price": 232223,
+		"stock": 213,
+		"action": "/search"
+	  }
+	],
+	"CustomerData": [
+	  {
+		"avatar": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"name": "John Cena",
+		"gender": "Male",
+		"email": "johncena@252gmail.com",
+		"role": "user"
+	  },
+	  {
+		"avatar": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804",
+		"name": "Roman Reigns",
+		"gender": "Male",
+		"email": "roman@781gmail.com",
+		"role": "user"
+	  }
+	],
+	"TransData": [
+	  {
+		"avatar": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"amount": 6700,
+		"discount": 800,
+		"quantity": 4,
+		"status": "Processing"
+	  },
+	  {
+		"avatar": "https://m.media-amazon.com/images/I/514T0SvwkHL._SL1500_.jpg",
+		"amount": 956,
+		"discount": 57,
+		"quantity": 2,
+		"status": "Shipped"
+	  }
+	]
+  }

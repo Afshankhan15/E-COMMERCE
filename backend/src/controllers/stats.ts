@@ -1,0 +1,6 @@
+// import { TryCatch } from "../middlewares/error.js"
+export {};
+// export const getDashboardStats = TryCatch(async (req, res, next) => {})
+// export const getPieChart = TryCatch(async (req, res, next) => {})
+// export const getBarChart = TryCatch(async (req, res, next) => {})
+// export const getLineChart = TryCatch(async (req, res, next) => {})
