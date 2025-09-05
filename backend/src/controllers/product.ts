@@ -4,7 +4,7 @@ import ErrorHandler from "../utils/utility-class.js";
 import { rm } from "fs";
 import { myCache } from "../app.js";
 import { invalidateCache } from "../utils/features.js";
-export const newProduct = TryCatch(async (req, res, next) => {
+export const  newProduct = TryCatch(async (req, res, next) => {
   const { name, price, stock, category } = req.body;
   const photo = req.file; // not included in NewProductRequestBody interface as this is req.file
   if (!photo) {
@@ -81,7 +81,7 @@ export const getAdminProduct = TryCatch(async (req, res, next) => {
     products: products,
   });
 });
-// GET SINGLE PRODUCT
+// GET SINGLE PRODUCT : ALL CAN SEE
 export const getSingleProduct = TryCatch(async (req, res, next) => {
   // const product = await Product.findById(req.params.id)
   let product;

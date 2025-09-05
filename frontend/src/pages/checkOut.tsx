@@ -51,7 +51,7 @@ const CheckOutForm = () => {
     setIsProcessing(true);
 
     const orderData = {
-      orderItems: cartItems,
+      orderItems: cartItems, // cartItems also has stock but orderItems does not include it in DB
       shippingInfo,
       user: userID,
       subtotal,
@@ -116,7 +116,7 @@ const CheckOut = () => {
       //       "pi_3QuGqfQPD6Aroual0PmqgelO_secret_mJJHDiuUfuCYcFjH0N4aU9lk8", // coming from backend using stripe
       //   }}
       options={{
-        clientSecret: clientSecret,
+        clientSecret: clientSecret, // it includes the total amount of order price placed by user 
       }}
       stripe={stripePromise}
     >

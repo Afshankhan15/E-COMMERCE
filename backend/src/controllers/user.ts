@@ -14,15 +14,16 @@ export const newUser = TryCatch(
     const { name, email, photo, gender, _id, dob } = req.body;
     console.log(name, email, photo, gender, _id, dob);
     let user = await User.findById(_id);
-    if (user) {
+    if (user) { // if user already exist then -> login successfully
       return res.status(200).json({
         success: true,
         message: `welcome ${user.name}`,
       });
     }
     if (!name || !email || !photo || !gender || !_id || !dob) {
-      return next(new ErrorHandler("Please provide all fields", 400));
+      return next(new ErrorHandler("Please provide all fields", 400)); // next passes the ErrorHandler instance to the next middleware in the chain. and last is errorMiddleware(centralized error handler) defined in app.ts file
     }
+    // register user
     user = await User.create({
       name,
       email,

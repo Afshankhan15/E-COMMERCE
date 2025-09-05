@@ -39,8 +39,10 @@ app.use("/api/v1/payment", paymentRoute);
 app.use("/api/v1/dashboard", statsRoute);
 // make upload folder static to access the photo
 app.use("/uploads", express.static("uploads"));
+
 // last middleware which runs after api
-app.use(errorMiddleware);
+app.use(errorMiddleware); // errorMiddleware Role: Acts as the final catch-all, formatting and sending the response.
+
 app.listen(PORT, () => {
   console.log(`server is working on http://localhost:${PORT}`);
 });

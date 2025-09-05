@@ -25,7 +25,7 @@ const schema = new mongoose.Schema(
       type: String,
       required: [true, "Please enter photo"],
     },
-    role: {
+    role: { // IT IS not being passed from frontend
       type: String,
       enum: ["admin", "user"],
       default: "user",

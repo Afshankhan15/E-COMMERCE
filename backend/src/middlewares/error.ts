@@ -3,7 +3,7 @@ export const errorMiddleware = (
   err,
   req,
   res,
-  next,
+  next
 ) => {
   err.message || (err.message = "Internal Server Error");
   err.statusCode || (err.statusCode = 500); // if err.statusCode availabe then take err.statusCode else 500

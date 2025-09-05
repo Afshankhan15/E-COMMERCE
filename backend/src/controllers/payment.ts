@@ -4,7 +4,7 @@ import ErrorHandler from "../utils/utility-class.js";
 import { stripe } from "../app.js";
 // create payment checkout
 export const checkoutPayment = TryCatch(async (req, res, next) => {
-  const { amount } = req.body;
+  const { amount } = req.body; // total amount of order placed by user
   if (!amount) return next(new ErrorHandler("Please enter amount", 400));
   const paymentIntent = await stripe.paymentIntents.create({
     amount: Number(amount) * 100,

@@ -5,7 +5,7 @@ import { TryCatch } from "./error.js";
 // req.params --> "api/gftsh"
 // req.query --> "api?id=gftsh"
 export const adminMiddleware = TryCatch(async (req, res, next) => {
-  const { id } = req.query;
+  const { id } = req.query; // id received from req.query(FRONT-END)
   if (!id) {
     return next(new ErrorHandler("Missing admin Id", 401));
   }

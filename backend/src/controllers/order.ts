@@ -3,6 +3,7 @@ import { Order } from "../models/order.js";
 import { invalidateCache, reduceStock } from "../utils/features.js";
 import ErrorHandler from "../utils/utility-class.js";
 import { myCache } from "../app.js";
+import { Product } from "../models/product.js";
 export const newOrder = TryCatch(async (req, res, next) => {
   const {
     shippingInfo,
@@ -34,6 +35,17 @@ export const newOrder = TryCatch(async (req, res, next) => {
     !total
   ) {
     return next(new ErrorHandler("Please enter all fields", 400));
+  }
+
+  // Validate products exist and have sufficient stock
+  for (const item of orderItems) {
+    const product = await Product.findById(item.productId);
+    if (!product) {
+      return next(new ErrorHandler(`Product not found: ${item.productId}`, 404));
+    }
+    if (product.stock < item.quantity) {
+      return next(new ErrorHandler(`Insufficient stock for ${product.name}`, 400));
+    }
   }
   const order = await Order.create({
     shippingInfo,
@@ -83,7 +95,13 @@ export const allOrder = TryCatch(async (req, res, next) => {
     orders = JSON.parse(myCache.get(key));
   } else {
     // orders = await Order.find(); // it is show order but in key "user" : "agsgs" it show user id but we want user name so populate user model
+   
     orders = await Order.find().populate("user", "name"); // now it will show id and name both if u wriye "user" only then entire user object
+    
+   
+  // .populate("orderItems.productId", "name price photo");
+console.log(JSON.stringify(orders, null, 2))
+
     myCache.set(key, JSON.stringify(orders));
   }
   return res.status(200).json({

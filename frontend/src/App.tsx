@@ -64,7 +64,7 @@ import Loader from "./components/loader";
 import { Toaster } from "react-hot-toast";
 import { onAuthStateChanged } from "firebase/auth";
 // import { auth } from "./firebase";
-import {auth} from './firebase'
+import { auth } from "./firebase";
 import {
   getUserInfo,
   userExist,
@@ -97,9 +97,9 @@ const CheckOut = lazy(() => import("./pages/checkOut"));
 const App = () => {
   const dispatch = useAppDispatch();
 
-//   const { user, loading } = useSelector(
-//     (state: RootState) => state.userReducer
-//   );
+  //   const { user, loading } = useSelector(
+  //     (state: RootState) => state.userReducer
+  //   );
 
   const { user, loading } = useSelector(
     (state: RootState) => ({
@@ -109,7 +109,6 @@ const App = () => {
     shallowEqual // Prevents re-render unless user or loading changes
   );
 
-  
   // Not a Re-Run: The useEffect doesn’t trigger again after the first render —it’s the listener callback inside onAuthStateChanged(auth, callback) that executes when the auth state changes, like when a user logs in.(login, logout, or app load with a persisted session)
 
   // LOGGED IN OR not on the basis of user exist on firebase or not simple
